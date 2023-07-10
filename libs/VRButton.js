@@ -80,7 +80,7 @@ class VRButton{
             self.renderer.xr.setSession( session );
             self.stylizeElement( button, false, 12, true );
             
-            button.textContent = 'EXIT VR';
+            button.textContent = 'EXIT VR EXPERIENCE';
 
             currentSession = session;
             
@@ -93,7 +93,7 @@ class VRButton{
             currentSession.removeEventListener( 'end', onSessionEnded );
 
             self.stylizeElement( button, true, 12, true );
-            button.textContent = 'ENTER VR';
+            button.textContent = 'ENTER VR EXPERIENCE';
 
             currentSession = null;
             
@@ -113,7 +113,7 @@ class VRButton{
         button.onmouseenter = function () {
             
             button.style.fontSize = '12px'; 
-            button.textContent = (currentSession===null) ? 'ENTER VR' : 'EXIT VR';
+            button.textContent = (currentSession===null) ? 'ENTER VR EXPERIENCE' : 'EXIT VR EXPERIENCE';
             button.style.opacity = '1.0';
 
         };
